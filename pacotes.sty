@@ -1,0 +1,64 @@
+%###########################################################################
+% pacotes.sty
+% Copyright (c) 2022 Ícaro Vidal Freire
+%---------------------------------------------------------------------------
+% Licença  : The MIT License (MIT) 
+%            Veja aqui: <https://www.mit.edu/~amini/LICENSE.md>
+% Versão   : 0.1.0
+% Descrição: Pacote para agregar, em um único arquivo, os mais variados 
+%            pacotes que uso nos textos escritos com LaTeX2e
+%###########################################################################
+
+% identificações -----------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pacotes}[2022/08/07 v0.1.0 Metapacote pessoal para LaTeX]
+
+% declarações preliminares -------------------------------------------------
+
+\RequirePackage{eulervm}
+\RequirePackage{fontspec}
+  \setmonofont{Ubuntu Mono}
+  \newfontfamily\grega{FreeSerif}
+  \newfontfamily\fontins{Fontin Sans}
+  \newfontfamily\arara{Comfortaa}
+\RequirePackage{Alegreya, AlegreyaSans}
+
+\RequirePackage[brazil]{babel}
+
+\RequirePackage[a5paper]{geometry}
+
+\RequirePackage{graphicx}
+  \graphicspath{{./figs/}}
+
+\RequirePackage{pdfpages}
+
+\RequirePackage{emoji}
+\RequirePackage{fontawesome5}
+\RequirePackage{hologo}
+
+\RequirePackage{hyperref}
+  \hypersetup
+  {
+    colorlinks   = true,
+    linkcolor    = blue,
+    citecolor    = blue,
+    filecolor    = blue,
+    urlcolor     = blue,
+    pdfnewwindow = true,
+    pdfproducer  = {LuaTeX},
+    pdfcreator   = {LaTeX2e com neovim e arara}, 
+    pdftitle     = {Tangenciando o LaTeX},
+    pdfauthor    = {Ícaro Vidal Freire},
+    pdfsubject   = {Minicurso ofertado no III EMAT do IFBA/Valença},
+    pdfkeywords  = {tex, latex, lualatex, arara, minicurso, ufrb, ifba}
+  }
+
+\RequirePackage{microtype}
+
+\RequirePackage[most]{tcolorbox}
+
+\RequirePackage{tabularray}
+
+\RequirePackage{emoji}
+
+\RequirePackage{siunitx}

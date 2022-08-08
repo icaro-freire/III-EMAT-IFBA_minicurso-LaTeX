@@ -1,0 +1,21 @@
+% arara: lualatex
+
+%% arara: clean: { extensions: [aux, log, out, pdf] }
+
+% classe do documento ======================================================
+\documentclass[12pt]{ematIFBA}
+
+\usepackage{pacotes} %-------------------------------> metapacote para LaTeX
+
+% início do documento ======================================================
+\begin{document}
+%---------------------------------------------------------------------------
+%
+  \capa
+%
+  \include{tex/info.tex}
+  \include{tex/intro.tex}
+  \include{tex/01_cap_o-que-e-LaTeX.tex}
+%---------------------------------------------------------------------------
+\end{document}
+% fim do documento =========================================================
