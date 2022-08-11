@@ -17,7 +17,6 @@
 \LoadClass[12pt]{report}
 
 \RequirePackage{sectsty}
-  \sectionfont{\color{verdeIFBA}}
   \allsectionsfont{\sffamily}
 
 \RequirePackage
@@ -35,32 +34,12 @@
   \definecolor{azulUFRB}{rgb}{0.160784314, 0.08627451, 0.435294118}
 
 \RequirePackage{tikz}
-  \definecolor[named]{color01}{rgb}{.2,.4,.6}
 \RequirePackage[many]{tcolorbox}
   \tcbuselibrary{most}
 
 % mais declarações =========================================================
 
 % configurações de códigos ------------------------------------------------
-
-%% criando uma caixa de avisos 
-% \newtcolorbox[auto counter,number within=section]{aviso}[1][]{
-%    enhanced jigsaw,
-%    colback   = white,
-%    colframe  = douradoUFRB,
-%    coltitle  = douradoUFRB,
-%    fonttitle = \bfseries\sffamily,
-%    sharp corners,
-%    detach title,
-%    leftrule  = 22mm,
-%    underlay unbroken and first={%
-%      \node[below,text=black,anchor=east] at ([xshift=-22.5pt]interior.base west) {\Huge  \textbf{!}};
-%     }, 
-%    breakable,
-%    pad at break = 1mm,
-%    #1,
-%    code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
-%   }
 
 %% configurando caixa para códigos ----------------------------------------
 %%% icone do lapis
