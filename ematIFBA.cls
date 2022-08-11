@@ -19,6 +19,12 @@
 \RequirePackage{sectsty}
   \allsectionsfont{\sffamily}
 
+\RequirePackage
+[
+  font      = small,
+  textfont  = sf,
+  labelfont = {sf, bf}, 
+]{caption}
 
 % mais declarações =========================================================
 

@@ -52,7 +52,7 @@ Isso não é ao acaso!
 A palavra \TeX\ foi escolhida justamente porque as palavras \textsf{arte} 
 ({\grega τεχνη}) e \textsf{tecnologia} ({\grega τεχνολογία}) possuem a mesma raiz linguística {\grega τεχ}. 
 
-Do exposto, agora podemos expor as formas aceitáveis de pronunciar a palavra\LaTeXX.
+Do exposto, agora podemos indicar as formas aceitáveis de pronunciar a palavra\LaTeXX.
 
 \begin{itemize}
   \item[\emoji{speaking-head}] Se você quiser pronunciar mais parecido com o        Inglês, fale ``\textit{LeiTéc}''. 
@@ -61,6 +61,81 @@ Do exposto, agora podemos expor as formas aceitáveis de pronunciar a palavra\La
   \item[\emoji{prohibited}] Apenas, evite, depois desse minicurso, falar 
         ``\textit{LaTéckis}''; ou, pior ainda, ``\textit{LáTeckis}''. \emoji{winking-face-with-tongue}
 \end{itemize}
+
+% seção 02: Mas, o que é o LaTeX ===========================================
+
+\section{Já sei falar, mas o que é \LaTeXX?}
+\label{sec:word-latex}
+
+Tudo bem\ldots\
+Como vocês já sabem pronunciar corretamente a essa palavra, vamos agora
+dizer \ldots\ o que \textbf{não} é \LaTeXX. 
+
+Calma, mas alguns, no início, costumam comparar o \LaTeXX\ com algum editor 
+de textos, como o Word ou LibreOffice. 
+O \LaTeXX\ não é um editor de textos!
+E, mesmo que fôssemos comparar, a filosofia seria diferente!
+Editores como Word ou LibreOffice são \textsf{WYSIYYG} (\textit{What You See Is What You Get} --- O que você vê é o que você tem); ou seja, se você 
+quer um símbolo como $\sum$, você precisa clicar sobre ele em algum lugar
+do editor.
+Na filosofia do \LaTeXX, você digita comandos e depois é necessário uma 
+\textit{compilação}, para que os símbolos (e o próprio texto) sejam 
+exibidos adequadamente.
+
+Então, já temos uma ideia do que \textbf{não} é o \LaTeXX!
+Não é um editor de textos!
+E, por conta disso, é natural que curva de aprendizado seja um pouco 
+diferente: é necessário uma aquisição prévia de vocabulários para comandos. 
+Entretanto, espera-se uma flexibilidade e otimização de tarefas tipográficas
+à medida que esse vocabulário é expandido, principalmente quando o texto 
+que se deseja produzir é complexo (com \textit{hiperlinks}; referências 
+cruzadas; referências bibliográficas; index; muitas figuras ou tabelas; 
+etc.). 
+Veja a Figura~\ref{fig:latex-vs-word} para essa comparação hipotética. 
+
+\begin{figure}[!htbp]
+  \centering
+    \includegraphics[width=0.7\textwidth]{latex-vs-word}
+  \caption{Curva de aprendizado}
+  \label{fig:latex-vs-word}
+\end{figure}
+
+Vocês estão percebendo que o \LaTeXX\ está parecendo uma espécie de 
+\textsf{linguagem}, visto que há uma aquisição de vocabulário, estruturas 
+e organização. 
+Mas, que tipo de ``linguagem'' seria o \LaTeXX?
+
+% subsection 03: TeX vs LaTeX ----------------------------------------------
+
+\subsection{\TeX\ vs \LaTeXX}
+\label{subsec:tex-latex}
+
+Para entender que tipo de linguagem é o \LaTeXX, precisamos conhecer o que 
+é o \TeX. 
+
+Tudo começou quando 
+\href
+{
+  https://en.wikipedia.org/wiki/Donald_Knuth
+}
+{
+  \sffamily
+  Donald Ervin Knuth
+}
+recebeu uma cópia de seu novo livro de programação. 
+Ele simplesmente não se conformou com o resultado tipográfico em suas mãos. 
+Como cientista da computação Knuth pensou que poderia criar uma linguagem 
+de programação que preenchesse harmoniosamente, com algum algorítmo 
+engenhoso, com o ``0'' (zero), para espaços onde \textbf{não há} ``tinta'';
+e, ``1'' (um) para espaços \textbf{com} tinta.
+Foi formada a idea do \TeX. 
+
+Todavia, a linguagem \TeX\ produzia comandos primitivos essenciais, mas 
+ainda era preciso criar um conjunto de ``atalhos'' (macros) para certas 
+estruturas de um texto, por exemplo. 
+O próprio Knuth produziu esse conjunto de macros, inicialmente, denominado 
+\textsf{Plain \TeX}.
+
 
 
 

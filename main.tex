@@ -1,4 +1,5 @@
 % arara: lualatex
+% arara: lualatex if found('log', 'undefined references')
 
 %% arara: clean: { extensions: [aux, log, out, pdf] }
 
@@ -15,6 +16,9 @@
 %
   \include{tex/info.tex}
   \include{tex/intro.tex}
+%
+  \tableofcontents
+%
   \include{tex/01_cap_o-que-e-LaTeX.tex}
 %---------------------------------------------------------------------------
 \end{document}
