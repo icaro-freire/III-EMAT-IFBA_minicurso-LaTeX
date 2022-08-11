@@ -17,6 +17,7 @@
 \LoadClass[12pt]{report}
 
 \RequirePackage{sectsty}
+  \sectionfont{\color{verdeIFBA}}
   \allsectionsfont{\sffamily}
 
 \RequirePackage
@@ -29,33 +30,37 @@
 
 \RequirePackage{xcolor} 
   \definecolor{douradoUFRB}{rgb}{0.929411765, 0.603921569, 0.066666667}
+  \definecolor{verdeIFBA}{rgb}{0.2078431, 0.5960784, 0.1882353}
+  \definecolor{redIFBA}{rgb}{0.78823529, 0.04705882, 0.05882353}
   \definecolor{azulUFRB}{rgb}{0.160784314, 0.08627451, 0.435294118}
-  \definecolor{darkgreen}{rgb}{0.33, 0.42, 0.18}
 
-\RequirePackage[most]{tcolorbox}
+\RequirePackage{tikz}
+  \definecolor[named]{color01}{rgb}{.2,.4,.6}
+\RequirePackage[many]{tcolorbox}
+  \tcbuselibrary{most}
 
 % mais declarações =========================================================
 
 % configurações de códigos ------------------------------------------------
 
 %% criando uma caixa de avisos 
-\newtcolorbox[auto counter,number within=section]{aviso}[1][]{
-   enhanced jigsaw,
-   colback   = white,
-   colframe  = douradoUFRB,
-   coltitle  = douradoUFRB,
-   fonttitle = \bfseries\sffamily,
-   sharp corners,
-   detach title,
-   leftrule  = 22mm,
-   underlay unbroken and first={%
-     \node[below,text=black,anchor=east] at ([xshift=-22.5pt]interior.base west) {\Huge  \textbf{!}};
-    }, 
-   breakable,
-   pad at break = 1mm,
-   #1,
-   code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
-  }
+% \newtcolorbox[auto counter,number within=section]{aviso}[1][]{
+%    enhanced jigsaw,
+%    colback   = white,
+%    colframe  = douradoUFRB,
+%    coltitle  = douradoUFRB,
+%    fonttitle = \bfseries\sffamily,
+%    sharp corners,
+%    detach title,
+%    leftrule  = 22mm,
+%    underlay unbroken and first={%
+%      \node[below,text=black,anchor=east] at ([xshift=-22.5pt]interior.base west) {\Huge  \textbf{!}};
+%     }, 
+%    breakable,
+%    pad at break = 1mm,
+%    #1,
+%    code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
+%   }
 
 %% configurando caixa para códigos ----------------------------------------
 %%% icone do lapis
@@ -92,10 +97,10 @@
   fonttitle=\bfseries\sffamily,
   enhanced,
   drop lifted shadow,
-  colback=azulUFRB!5,
-  colframe=azulUFRB,
+  colback=verdeIFBA!5,
+  colframe=verdeIFBA,
   breakable,
-  overlay={#2{azulUFRB}},
+  overlay={#2{verdeIFBA}},
   toptitle=0.2em,
   bottomtitle=.2em,
   coltitle=white,
@@ -104,7 +109,7 @@
   listing only,
   listing options={
     numbers=left,
-    numberstyle=\tiny\sffamily\color{azulUFRB},
+    numberstyle=\tiny\sffamily\color{verdeIFBA},
     basicstyle=\scriptsize\ttfamily,
   },
   after skip=1em
@@ -157,10 +162,10 @@
   fonttitle=\bfseries\sffamily,
   enhanced,
   drop lifted shadow,
-  colback=douradoUFRB!5,
-  colframe=douradoUFRB,
+  colback=redIFBA!5,
+  colframe=redIFBA,
   breakable,
-  overlay={#2{douradoUFRB}},
+  overlay={#2{redIFBA}},
   toptitle=0.2em,
   bottomtitle=.2em,
   coltitle=white,
@@ -183,7 +188,7 @@
 % configuração para escrita simples de código destacado -------------------
 
 \tcbset{
-  colframe  = darkgreen,
+  colframe  = verdeIFBA,
   colback   = white,
   colupper  = black, 
   fonttitle = \bfseries\sffamily,
