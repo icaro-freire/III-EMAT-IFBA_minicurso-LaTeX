@@ -1,16 +1,16 @@
-% arara: lualatex
+% arara: lualatex 
 % arara: lualatex if found('log', 'undefined references')
 
 %% arara: clean: { extensions: [aux, log, out, pdf, listing, toc] }
 
-% classe do documento ======================================================
+% classe do documento =====================================================
 \documentclass[12pt]{ematIFBA}
 
-\usepackage{pacotes} %-------------------------------> metapacote para LaTeX
+\usepackage{pacotes} %------------------------------> metapacote para LaTeX
 
-% início do documento ======================================================
+% início do documento =====================================================
 \begin{document}
-%---------------------------------------------------------------------------
+%--------------------------------------------------------------------------
   \setlength\emergencystretch{\hsize}
 %
   \capa
@@ -21,6 +21,6 @@
   \tableofcontents
 %
   \include{tex/01_cap_o-que-e-LaTeX.tex}
-%---------------------------------------------------------------------------
+%--------------------------------------------------------------------------
 \end{document}
-% fim do documento =========================================================
+% fim do documento ========================================================
