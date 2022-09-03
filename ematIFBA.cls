@@ -190,4 +190,5 @@
 
 % comandos gerais ----------------------------------------------------------
 \newcommand{\textbs}[1]{\textbf{\textsf{#1}}} %-------> negrito e sem serifa
+\newcommand{\textis}[1]{\textit{\textsf{#1}}} %-------> negrito e sem serifa
 \newcommand{\LaTeXX}{ {\grega \hologo{LaTeX}} } %-----> LaTeX melhorado
