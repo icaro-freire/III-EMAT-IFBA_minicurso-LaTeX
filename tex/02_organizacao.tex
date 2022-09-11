@@ -1,0 +1,101 @@
+%==========================================================================
+% Capítulo 2: Organizando para Começar 
+%==========================================================================
+\chapter{Organizando para Começar} 
+\label{cap:organizando} 
+
+
+Esse capítulo poderia ser opcional, mas acredito que, depois de um tempo usando 
+o \LaTeXX, você começará a pensar sobre \textit{organização}. 
+
+E existem muitas vertentes do que seja ``organização'': podemos falar em como 
+\textit{escrever} o nome dos arquivos que vamos usar para escrever em \LaTeXX;
+podemos falar na organização do diretório onde faremos a composição tipográfica
+(colocaremos tudo em um único diretório, ou vamos separar por categorias os 
+arquivos?); podemos também pensar na organização da escrita do texto (vamos 
+escrever tudo em um único arquivo, ou poderíamos escrever partes do texto em 
+arquivos diferentes e, depois, juntarmos tudo num arquivo principal?); etc. 
+
+É sobre isso que falaremos nesse capítulo. 
+Mas, desde já, confesso que tudo será bem pessoal. 
+Você pode fazer como desejar!
+
+\section{Como escrever os nomes do arquivo para compilação} %---------------
+
+Os compiladores são suficientemente inteligentes para identificar a linguagem 
+{ \grega \hologo{LaTeX2e} } em um arquivo de texto. 
+Mas, é uma boa prática salvar os arquivos no formato \texttt{.tex}. 
+Isso facilita a identificação de ícones por parte das IDEs, por exemplo.
+
+Também são boas práticas: salvar os arquivos \texttt{.tex} com nomes 
+\textit{sem acentuação} ou \textit{caracteres especiais do teclado} (\%, \$, \&, etc.). 
+E, se o nome do arquivo for composto por mais de uma palavra, é aconselhável 
+também \textit{não deixar espaço entre elas}.
+
+Por exemplo, suponha que você esteja escrevendo um \textit{artigo} sobre 
+\textit{números complexos}. \textbs{Não} escreva assim: 
+
+\tcboxC{
+  Artigo! Números Complexos.tex
+}
+
+Seria aconselhável retirar a \textit{exclamação}, o \textit{acento agudo} e os 
+\textit{espaços entre as palavras}. 
+Você pode usar estilos de codificação para nomear seus arquivos, por exemplo. 
+Dentre esses estilos destaco: \textsf{camelCase}; \textsf{CapitalCase}; 
+\textsf{snake\_case}; \textsf{kebab-case}, ou uma mistura entre eles. 
+Veja algumas possibilidades:
+
+\tcboxC{
+  \footnotesize
+  \begin{tblr}{l}
+    artigoNumerosComplexos.tex      \\
+    ArtigoNumerosComplexos.tex      \\ 
+    artigo\_numeros\_complexos.tex  \\
+    artigo-numeros-complexos.tex    \\
+    artigo\_numeros-complexos.tex
+  \end{tblr}
+}
+
+Particularmente, prefiro a última opção: uma mistura entre \textsf{snake-case} 
+e \textsf{kebab-case}. 
+
+Há quem prefira escrever todo o texto num único arquivo \texttt{.tex}, 
+inclusive as configurações. 
+Entretanto, nesse minicurso, vamos separar as coisas\ldots 
+
+\section{O arquivo mestre} %------------------------------------------------
+
+Suponha que esse artigo hipotético sobre \textit{números complexos} seja 
+composto por cinco partes: 
+introdução histórica; 
+representações dos números complexos; 
+raízes de um número complexo; 
+teorema fundamental da álgebra e a 
+conclusão. 
+Como há uma sequência subjacente, podemos enumerar esses itens, bem como usar 
+a forma de escrita que aprendemos na seção anterior. 
+A ideia é reduzir nomes, sem contudo deixar de lembrar o conteúdo principal de 
+cada texto. 
+Uma possibilidade é dada a seguir:
+
+\tcboxC{
+  \begin{tblr}{l}
+    01\_intro-historica.tex; \\
+    02\_representacoes.tex;  \\
+    03\_raizes.tex;          \\
+    04\_teo-fundamental.tex; \\
+    05\_conclusao.tex        \\
+  \end{tblr}
+}
+
+Então, como concatenar essas seções?
+Fazemos isso por meio de uma função no \LaTeXX\ em um arquivo principal (ou mestre). 
+Poderia ser \texttt{artigo\_numeros-complexos.tex}, mas vamos denominá-lo de 
+\texttt{main.tex} (que quer dizer \textit{principal}). 
+É um nome padrão: pequeno, sem acentuação e que traduz o que faz. 
+
+\begin{atencao}{Atenção!}{\exclamacao}
+  \sffamily
+  Nessa configuração, a compilação deve ser realizada no arquivo\; \texttt{main.tex}
+\end{atencao}

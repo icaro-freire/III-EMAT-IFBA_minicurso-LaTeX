@@ -176,7 +176,7 @@
 
 \newcommand{\tcboxC}[1]{
   \begin{center}
-    \tcbox[before skip = -0.5em, after skip = 1.2em]{#1}
+    \tcbox[before skip = -0.5em, after skip = 1.2em]{\sffamily #1}
   \end{center}
 }
 
@@ -190,5 +190,5 @@
 
 % comandos gerais ----------------------------------------------------------
 \newcommand{\textbs}[1]{\textbf{\textsf{#1}}} %-------> negrito e sem serifa
-\newcommand{\textis}[1]{\textit{\textsf{#1}}} %-------> negrito e sem serifa
+\newcommand{\textis}[1]{\textit{\textsf{#1}}} %-------> itálico e sem serifa
 \newcommand{\LaTeXX}{ {\grega \hologo{LaTeX}} } %-----> LaTeX melhorado
