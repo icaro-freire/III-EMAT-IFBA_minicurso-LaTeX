@@ -5,8 +5,8 @@
 \label{cap:organizando} 
 
 
-Esse capítulo poderia ser opcional, mas acredito que, depois de um tempo usando 
-o \LaTeXX, você começará a pensar sobre \textit{organização}. 
+Parte desse capítulo poderia ser opcional, mas acredito que, depois de um tempo 
+usando o \LaTeXX, você começará a pensar sobre \textit{organização}. 
 
 E existem muitas vertentes do que seja ``organização'': podemos falar em como 
 \textit{escrever} o nome dos arquivos que vamos usar para escrever em \LaTeXX;
@@ -91,11 +91,114 @@ Uma possibilidade é dada a seguir:
 
 Então, como concatenar essas seções?
 Fazemos isso por meio de uma função no \LaTeXX\ em um arquivo principal (ou mestre). 
-Poderia ser \texttt{artigo\_numeros-complexos.tex}, mas vamos denominá-lo de 
-\texttt{main.tex} (que quer dizer \textit{principal}). 
+Poderia ser feito no arquivo \texttt{artigo\_numeros-complexos.tex}, mas vamos 
+denominá-lo simplesmente de \texttt{main.tex} (que quer dizer \textit{principal}). 
 É um nome padrão: pequeno, sem acentuação e que traduz o que faz. 
+Além disso, se você seguir essa idea em outros trabalhos, poderá configurar seu 
+editor de \LaTeXX\ com atalhos convenientes. 
 
 \begin{atencao}{Atenção!}{\exclamacao}
   \sffamily
   Nessa configuração, a compilação deve ser realizada no arquivo\; \texttt{main.tex}
 \end{atencao}
+
+Também faremos isso no \textsf{Overleaf}: criaremos um projeto e, dentro dele, 
+organizaremos com diretórios distintos para arquivos distintos (\texttt{figs/}, 
+para figuras; \texttt{tex/}, para arquivos \texttt{.tex}; etc.); e um arquivo por 
+nome \texttt{main.tex}, onde faremos a compilação e onde estará comandos que 
+buscam as seções do artigo no diretório \textit{tex/}.
+
+Vamos conhecer a estrutura geral de um arquivo em {\grega \hologo{LaTeX2e}} 
+para assimilarmos melhor essa ideia da organização. 
+
+\section{{\grega \hologo{LaTeX2e}}: como começar a escrever} %-------- 
+
+Sendo direto, uma estrutura global e minimalista para começar a escrever é:
+
+\begin{codigo}{Estrutura global e mínima}{\lapis}
+\documentclass{article}
+\begin{document}
+  Podemos escrever aqui!
+\end{document}
+\end{codigo}
+
+Mas, o que significam essas coisas?
+
+Uma das características mais forte do \LaTeXX\ é a possibilidade de separarmos 
+o \textit{conteúdo} da \textit{formação}. 
+Quando iniciante nessa linguagem, configurar um arquivo da forma como você quer, 
+é um grande desafio. 
+Mas, como existem uma infinidade de \textit{templates} que se adequam à maioria  
+de nossas necessidades, basta inserirmos o \textit{conteúdo} e aprendermos algumas 
+confugurações daquele \textit{template}. 
+
+Agora, como organizar esse conteúdo? 
+
+Bom\dots\ para escrever em \LaTeXE\ você precisa declarar a \textis{classe} e 
+o \textis{ambiente} principal para escrita. 
+
+No que se refere à \textit{classe} existem uma infinidade delas! 
+Algumas já vem na distribuição básica do \LaTeXX, outras podemos instalar em 
+nosso sistema. 
+Dentre as classes \textit{standard} (padrão), destacamos: \textit{book}, para 
+escrita de livros; \textit{report}, para escrita de relatórios; \textit{article}, 
+para escrita de artigos. 
+Cada uma dessas classes possuem características distintas e não conseguiremos cobrir 
+nesse minicurso. 
+Por isso, vamos nos ater \textsc{apenas} na classe \textit{article}. 
+
+Como ``dizemos'' ao \LaTeXX\ que a classe que vamos trabalhar é a \textit{article}?
+Simples: usamos o comando 
+
+\tcboxC{
+  \ttfamily
+  \textbackslash documentclass\{article\}
+}
+
+Note que um comando no \LaTeXX\ começa (sempre) com uma ``barra invertida'', 
+chamada de \textit{backslash}. 
+Além disso, um comando pode possuir \textit{opções} ou \textit{argumentos}. 
+Geralmente, as \textit{opções} são colocadas dentro de \textsf{colchetes}.
+Só a nível de exemplificação, se colocarmos, no argumento do comando 
+\verb|\documentclass}|, a classe \textit{article}; podemos, dentre outras opções, 
+escolher:
+
+\begin{enumerate}
+  \item \textis{Tamanho da fonte}. Para todo o corpo do texto, há as opções: 
+        \texttt{10pt}, \texttt{11pt} e \texttt{12pt}. Por padrão, vem \texttt{10pt}.
+  \item \textis{Tipo do papel.} Folha A4: \texttt{a4paper}; Folha A5: \texttt{a5paper}; 
+        etc. Por padrão, vem o americano: \texttt{letterpaper};
+  \item \textis{Alinhamento da numeração em equações}. Por padrão, as equações,
+        são enumeradas à direita, mas você pode mudar isso, colocando a opção 
+        \texttt{leqno}, para alinhas à numeração à esquerda;
+  \item \textis{Texto em duas colunas}. Para colocar texto em duas colunas, 
+        usamos \texttt{twocolumn}.
+  \item \textis{Modificação das margens}. Na classe \textit{article}, as margens 
+        são configuradas para que a impressão seja em apenas um lado. 
+        Mas, você pode colocar a opção \texttt{twoside} para modificar isso e 
+        configurar para impressão em dois lados.\\ 
+        \emoji{warning}\; Isso não diz pra sua impressora que ela tem que imprimir 
+        em dois lados!! 
+        Apenas configura as margens para que você possa configurar sua improssora 
+        para o trabalho! 
+\end{enumerate}
+
+Para nossos fins, apenas usatemos a opção da fonte \texttt{12pt}. 
+O tamanho do paper, vamos escolher em outro momento. 
+
+No que se refere ao \textsf{ambiente princial para escrita}, o comando 
+\verb|\begin{document}| foi indicado. 
+Entre ele e o \verb|\end{document}|, escrevemos nosso texto! 
+
+Comandos que possuem uma estrutura como:
+
+\tcboxC{
+  \textbackslash begin\{comando\}
+  ...
+  \textbackslash end\{comando\}
+}
+denominamos de \textis{ambientes}. 
+
+Além disso, tudo o que bem antes do \verb|\begin{document}| até o \verb|\documentclass|, 
+denominamos de \textis{preâmbulo}. 
+No preâmbulo pode conter configurações para todo o texto. 
